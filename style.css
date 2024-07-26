@@ -37,7 +37,7 @@ nav .navBody {
   align-items: center;
   gap: 7vw;
   background:
-rgba( 215, 8, 8, 0 );
+    rgba(215, 8, 8, 0);
 }
 
 nav h1 {
@@ -77,7 +77,7 @@ nav h4 a {
   position: absolute;
   top: 100px;
   left: 413px;
-  transition: 1s ;
+  transition: 1s;
 }
 
 .canvasOnTopWrapper {
@@ -86,7 +86,7 @@ nav h4 a {
 }
 
 
-canvas{
+canvas {
   width: 500px;
   height: 500px;
 }
@@ -100,7 +100,7 @@ canvas{
 }
 
 .page-1 .box-1 {
-  width: 45vw;
+  width: 40vw;
   height: 95vh;
   display: flex;
   justify-content: center;
@@ -229,13 +229,137 @@ canvas{
 
 #string {
   width: 100%;
-  height: 200px;
+  height: 100px;
+}
+
+.wrapperPage-2 {
+  overflow-x: hidden;
 }
 
 .page-2 {
-  width: 100vw;
   height: 100vh;
   display: flex;
+  width: fit-content;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.page-2 .page-2h {
+  display: flex;
+  margin-left: 5vw;
+  font-size: 5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-flow: row;
+}
+
+.html {
+  width: 335px;
+  height: 400px;
+  margin-left: 50px;
+  background-color: #121212;
+  border-radius: 15%;
+  border: 1px solid #B3B3B3;
+  display: flex;
   justify-content: center;
-  align-items:center
-}###  #
+  overflow: hidden;
+}
+
+.css {
+  width: 335px;
+  height: 400px;
+  margin-left: 100px;
+  background-color: #121212;
+  border-radius: 15%;
+  border: 1px solid #B3B3B3;
+}
+
+.js {
+  width: 335px;
+  height: 400px;
+  margin-left: 100px;
+  background-color: #121212;
+  border-radius: 15%;
+  border: 1px solid #B3B3B3;
+}
+
+.gsap {
+  width: 335px;
+  height: 400px;
+  margin-left: 100px;
+  background-color: #121212;
+  border-radius: 15%;
+  border: 1px solid #B3B3B3;
+}
+
+.threeJs {
+  width: 335px;
+  height: 400px;
+  margin-left: 100px;
+  margin-right: 50px;
+  background-color: #121212;
+  border-radius: 15%;
+  border: 1px solid #B3B3B3;
+}
+
+.mainText {
+  background-color: transparent;
+  display: flex;
+  width: 100px;
+  height: 50px;
+  justify-content: center;
+}
+
+.mainText h1 {
+  background-color: #121212;
+  margin-top: 30px;
+  color: #BABABA;
+  font-size: 50pt;
+}
+
+.number {
+  background-color: #121212;
+  background-repeat: no-repeat;
+  font-size: 50pt;
+  opacity: 0.4;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  margin-top: -5pt;
+  border-radius: 15%;
+}
+
+.number h1 {
+  background-color: #121212;
+  margin-left: 10pt;
+}
+  
+
+.html .secondaryText {
+  background-color: #121212;
+  font-size: 30pt;
+  top: 35%;
+  left: 10%; 
+  position: absolute;
+}
+
+.html .secondaryText h6 {
+  color: #888888;
+  background-color: #121212
+}
+
+.html .secondaryText h6 p{
+  background-color: #121212;
+  font-size: 13pt;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  color: #B9B9B9;
+  flex-wrap: wrap;
+}
+
+.lightBG {
+  width: 100%;
+  height: 100vh;
+}
