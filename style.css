@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #1F1F1F;
   color: #DEDEDE;
   font-family: "kanit";
+  overflow-x: hidden
 }
 
 body,
 head {
+  background-color: #1F1F1F;
   padding-top: 85px;
 }
 
@@ -35,7 +36,7 @@ nav .navBody {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7vw;
+  gap: 6vw;
   background:
     rgba(215, 8, 8, 0);
 }
@@ -100,9 +101,21 @@ canvas {
   align-items: center
 }
 
+.page-1 .backgroundText {
+  position: absolute;
+  z-index: 0;
+  top: 5%;
+  font-size: 10vw;
+}
+
+.page-1 .backgroundText .char{
+  color: transparent;
+  -webkit-text-stroke: 1px #929292;
+}
+
 .page-1 .box-1 {
-  width: 40vw;
-  height: 95vh;
+  width: 47vw;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,45 +128,72 @@ canvas {
 }
 
 .page-1 .box-1 .primary-text {
-  font-size: 5vw
+  font-size: 7vw
 }
 
 .button-page-1 {
   height: 55px;
   width: 17vw;
-  border: 3px solid #004A77;
+  border: 2px solid #004A77;
   margin-top: 2vh;
   font-size: 16pt;
   display: flex;
   justify-content: center;
   font-weight: bold;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 10px;
   color: #fff;
   transition: 0.5s;
-  transform: translateX(-300px)
+  transform: translateX(-300px);
+  overflow: hidden;
 }
 
-.button-page-1:hover {
+.button-page-1 span {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.button-page-1::before {
+  content: '';
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50px;
+  background: #004A77;
+  transition: width 0.5s, height 0.5s;
+}
+
+.button-page-1:hover::before {
+  width: 300px;
+  height: 300px;
   background-color: #004A77;
 }
 
 
 .page-1 .box-2 {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 2vw 0;
+  margin: 0 0 0 2vw;
+}
+
+.box-2 svg {
+  position: absolute;
+  width: 50vw;
 }
 
 .box-2 img {
-  width: 450px;
+  width: 400px;
 }
 
 #string {
-  width: 100%;
+  width: 100vw;
   height: 100px;
 }
 
@@ -184,7 +224,7 @@ canvas {
   height: 400px;
   margin-left: 50px;
   background-color: #121212;
-  border-radius: 15%;
+  border-radius: 15% 5% 15% 5%;
   border: 1px solid #B3B3B3;
   display: flex;
   justify-content: center;
@@ -194,19 +234,25 @@ canvas {
 .css {
   width: 335px;
   height: 400px;
-  margin-left: 100px;
+  margin-left: 50px;
   background-color: #121212;
-  border-radius: 15%;
+  border-radius: 5% 15% 5% 15%;
   border: 1px solid #B3B3B3;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .js {
   width: 335px;
-  height: 400px;
-  margin-left: 100px;
-  background-color: #121212;
-  border-radius: 15%;
-  border: 1px solid #B3B3B3;
+height: 400px;
+margin-left: 50px;
+background-color: #121212;
+border-radius: 5% 15% 5% 15%;
+border: 1px solid #B3B3B3;
+display: flex;
+justify-content: center;
+overflow: hidden;
 }
 
 .gsap {
@@ -214,7 +260,7 @@ canvas {
   height: 400px;
   margin-left: 100px;
   background-color: #121212;
-  border-radius: 15%;
+  border-radius: 5% 15% 5% 15%;
   border: 1px solid #B3B3B3;
 }
 
@@ -224,12 +270,11 @@ canvas {
   margin-left: 100px;
   margin-right: 50px;
   background-color: #121212;
-  border-radius: 15%;
+  border-radius: 15% 5% 15% 5%;
   border: 1px solid #B3B3B3;
 }
 
 .mainText {
-  background-color: transparent;
   display: flex;
   width: 100px;
   height: 50px;
@@ -237,14 +282,12 @@ canvas {
 }
 
 .mainText h1 {
-  background-color: #121212;
   margin-top: 30px;
   color: #BABABA;
   font-size: 50pt;
 }
 
 .number {
-  background-color: #121212;
   background-repeat: no-repeat;
   font-size: 50pt;
   opacity: 0.4;
@@ -257,26 +300,22 @@ canvas {
 }
 
 .number h1 {
-  background-color: #121212;
   margin-left: 10pt;
 }
-  
 
-.html .secondaryText {
-  background-color: #121212;
+
+.secondaryText {
   font-size: 30pt;
   top: 35%;
-  left: 10%; 
+  left: 10%;
   position: absolute;
 }
 
-.html .secondaryText h6 {
+.secondaryText h6 {
   color: #888888;
-  background-color: #121212
 }
 
-.html .secondaryText h6 p{
-  background-color: #121212;
+.secondaryText h6 p {
   font-size: 13pt;
   margin-left: 10pt;
   margin-right: 10pt;
@@ -287,4 +326,4 @@ canvas {
 .lightBG {
   width: 100%;
   height: 100vh;
-}
+}#030303

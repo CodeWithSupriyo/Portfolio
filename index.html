@@ -121,14 +121,18 @@
     }
   </style>
   <link rel="stylesheet" href="style.css">
+  <script src="
+https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js
+"></script>
+  
 </head>
 
 <body>
   <nav>
     <h1>Portfolio</h1>
     <div class="navBody">
-      <h4 class="navBody1"><a href="#page-1">Home</a></h4>
-      <h4 class="navBody2"><a href="#box-1">Skills</a></h4>
+      <h4 class="navBody1"><a href="page-1">Home</a></h4>
+      <h4 class="navBody2"><a href="wrapperPage-2">Skills</a></h4>
       <h4 class="navBody3"><a href="#page-1">About</a></h4>
       <h4 class="navBody4"><a href="#page-1">Contact</a></h4>
     </div>
@@ -136,6 +140,9 @@
 
   <div class="main">
     <div class="page-1">
+      <div class="backgroundText">
+        <h1 id="portfolioTextPage1">PORTFOLIO</h1>
+      </div>
       <div class="box-1">
         <div class="text">
           <div class="secondary kanit-regular">
@@ -147,16 +154,28 @@
           <div class="secondary kanit-regular">
             I Develop and Design Websites
           </div>
-          <div class="button-page-1">View Skills</div>
+          <div class="button-page-1"><span>View Skills</span></div>
         </div>
       </div>
       <div class="box-2">
+        <svg id="visual" viewBox="0 0 900 900" width="900" height="900" version="1.1">
+          <g transform="translate(442.22047216396675 429.04941260487135)">
+            <path id="blob1"
+            d="M216.2 -250.8C287.1 -198.1 356.3 -136.6 384.9 -55.8C413.5 25 401.6 125 355.6 205.8C309.5 286.6 229.3 348.1 139.7 378.3C50.2 408.5 -48.8 407.2 -122.4 367C-195.9 326.9 -244.1 247.8 -292.5 167.3C-340.9 86.7 -389.6 4.7 -384.4 -75.2C-379.2 -155.2 -320.1 -233.1 -247 -285.4C-174 -337.7 -87 -364.3 -7.2 -355.8C72.6 -347.2 145.3 -303.5 216.2 -250.8" fill="#004A77">
+            </path>
+          </g>
+          
+          <g transform="translate(473.83547541479845 478.3798286845432)" style="visibility: hidden">
+            <path id="blob2"
+            d="M289 -182.2C352.8 -56.3 367.8 82.3 311.5 183.8C255.2 285.3 127.6 349.7 -17.4 359.7C-162.4 369.8 -324.8 325.5 -375.5 227.2C-426.2 128.9 -365.4 -23.4 -284.2 -159.3C-203 -295.2 -101.5 -414.6 5.5 -417.8C112.6 -421 225.2 -308 289 -182.2" fill="#004C90"></path>
+          </g>
+        </svg>
         <img src="/images/page-1.svg" alt="/images/page-1.svg">
       </div>
     </div>
     <div id="string">
       <svg width="1000" height="50">
-        <path d="M 20 25 Q 500 25 980 25" stroke="white" fill="transparent" />
+        <path d="M 20 25 Q 500 25 990 25" stroke="white" fill="transparent" />
       </svg>
     </div>
   </div>
@@ -174,19 +193,44 @@
         </div>
         <div class="secondaryText">
           <h6>
-            p{
-            <p>
+            < <p>
               I have mastered HTML, the foundational language of the web. With a deep understanding of HTML5 semantics, multimedia integration, and best practices, I can create structured and accessible web content.
-            </p>}
+              </p>/>
           </h6>
         </div>
       </div>
       <div class="card-2 css">
+        <div class="number">
+          <h1>2</h1>
+        </div>
         <div class="mainText">
           <h1>CSS</h1>
         </div>
+        <div class="secondaryText">
+          <h6>
+            p{
+            <p>
+              I am proficient in advanced CSS techniques, creating responsive and visually appealing designs with CSS Grid and Flexbox. I specialize in complex animations and transitions, enhancing user experiences with dynamic visuals.
+            </p>}
+          </h6>
+        </div>
       </div>
-      <div class="card-3 js"></div>
+      <div class="card-3 js">
+        <div class="number">
+          <h1>2</h1>
+        </div>
+        <div class="mainText">
+          <h1>JS</h1>
+        </div>
+        <div class="secondaryText">
+          <h6>
+            p{
+            <p>
+              I am proficient in advanced CSS techniques, creating responsive and visually appealing designs with CSS Grid and Flexbox. I specialize in complex animations and transitions, enhancing user experiences with dynamic visuals.
+            </p>}
+          </h6>
+        </div>
+      </div>
       <div class="card-4 gsap"></div>
       <div class="card-5 threeJs"></div>
     </div>
@@ -194,9 +238,10 @@
 
   <div class="space-100vh lightBG"></div>
   <script src="https://unpkg.com/split-type"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollSmoother.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
   <script type="module" src="main.js"></script>
 </body>

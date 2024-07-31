@@ -1,3 +1,11 @@
+const tween1 = KUTE.fromTo(
+  '#blob1',
+  { path : '#blob1' },
+  { path : '#blob2' },
+  { repeat: 9999, duratuion: 70000, yoyo: true }
+)
+
+tween1.start()
 
 const lenis = new Lenis({})
 
@@ -9,6 +17,7 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
+gsap.registerPlugin(ScrollTrigger)
 
 function page1Animation() {
 
@@ -27,35 +36,48 @@ function page1Animation() {
     duration: 0.7,
     stagger: 0.3
   })
+  
+  const portfolioTextPage1 = new SplitType("#portfolioTextPage1")
+  
+  tl.from('.char', {
+    y: -200,
+    stagger: 0.1,
+    delay: 0.5,
+    duration: 1
+  })
 
   tl.from(".text .primary-text", {
     x: -500,
     opacity: 0,
     duration: 1,
-    ease: Power2.easeOut
-  }, "sameTime")
+  }, "-=0.5")
 
   tl.from(".text .secondary", {
     x: -100,
     opacity: 0,
     duration: 0.7
-  })
+  }, "-=0.5")
 
   tl.to(".button-page-1", {
     x: 0,
-    duration: 1,
-    ease: Power1.ease
-  }, "sameTime")
+    duration: 0.6,
+  }, "-=0.5")
   
   tl.from(".page-1 img", {
     x: 100,
     opacity: 0,
     duration: 1,
-    ease: Power3.easeInOut
-  })
+  }, "-=0.5")
+  
+  const btn = document.querySelector(".button-page-1")
+  btn.onmousemove = (e) => {
+    const x = e.pageX - btn.offsetLeft;
+    const y = e.pageY - btn.offsetTop;
+    
+    btn.style.setProperty('--x', x + 'px')
+    btn.style.setProperty('--y', y + 'px')
+  }
 }
-
-gsap.registerPlugin(ScrollTrigger)
 
 const page2 = document.querySelector(".page-2")
 
