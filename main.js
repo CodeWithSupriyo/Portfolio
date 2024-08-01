@@ -1,8 +1,5 @@
 const tween1 = KUTE.fromTo(
-  '#blob1',
-  { path : '#blob1' },
-  { path : '#blob2' },
-  { repeat: 9999, duratuion: 70000, yoyo: true }
+  '#blob1', { path: '#blob1' }, { path: '#blob2' }, { repeat: 9999, duratuion: 99999, yoyo: true }
 )
 
 tween1.start()
@@ -17,9 +14,7 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
-gsap.registerPlugin(ScrollTrigger)
-
-function page1Animation() {
+const page1Animation = (container) => {
 
   const tl = gsap.timeline()
 
@@ -36,9 +31,9 @@ function page1Animation() {
     duration: 0.7,
     stagger: 0.3
   })
-  
+
   const portfolioTextPage1 = new SplitType("#portfolioTextPage1")
-  
+
   tl.from('.char', {
     y: -200,
     stagger: 0.1,
@@ -50,7 +45,7 @@ function page1Animation() {
     x: -500,
     opacity: 0,
     duration: 1,
-  }, "-=0.5")
+  }, "-=0.8")
 
   tl.from(".text .secondary", {
     x: -100,
@@ -59,25 +54,29 @@ function page1Animation() {
   }, "-=0.5")
 
   tl.to(".button-page-1", {
-    x: 0,
+    y: 0,
     duration: 0.6,
-  }, "-=0.5")
-  
+    opacity: 1
+  }, "-=0.4")
+
   tl.from(".page-1 img", {
     x: 100,
     opacity: 0,
     duration: 1,
-  }, "-=0.5")
-  
+  }, "-=1")
+
   const btn = document.querySelector(".button-page-1")
   btn.onmousemove = (e) => {
     const x = e.pageX - btn.offsetLeft;
     const y = e.pageY - btn.offsetTop;
-    
+
     btn.style.setProperty('--x', x + 'px')
     btn.style.setProperty('--y', y + 'px')
   }
 }
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 const page2 = document.querySelector(".page-2")
 
@@ -113,8 +112,6 @@ let tl2 = gsap.timeline({
   }
 })
 
-const mainText = document.querySelector(".mainText")
-
 tl2.from("#skillText", {
   y: 300,
   delay: 1,
@@ -123,10 +120,6 @@ tl2.from("#skillText", {
   ease: Power4.easeOut
 })
 
-tl2.from(mainText, {
-  y: 100,
-  duration: 1.5,
-})
 
 tl2.from(".page-2 .card-1", {
   y: -500,
