@@ -139,16 +139,23 @@ tl2.from(".page-2 .card-3", {
   duration: 0.9,
 })
 
-tl2.from(".page-2 .card-4", {
-  y: 500,
-  opacity: 0,
-  duration: 0.9,
-})
+//paage3
 
-tl2.from(".page-2 .card-5", {
-  y: -500,
-  opacity: 0,
-  duration: 0.9,
-})
+const tl3 = gsap.timeline({scrollTrigger: {
+  trigger: ".librirariesInJS",
+  start: "0% 100%",
+  end: "400% 0%",
+  scrub: true
+}})
+
+tl3.to(".strip-l", {
+  marginLeft: "0%",
+  ease: Power4.ease
+}, 'strip')
+
+tl3.to(".strip-r", {
+  marginLeft: "-100%",
+  ease: Power4.ease
+}, 'strip')
 
 page1Animation()

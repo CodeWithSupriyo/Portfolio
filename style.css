@@ -319,37 +319,50 @@ canvas {
 }
 
 .strip {
-  font-size: 6vw;
+  font-size: 50pt;
   display: flex;
   width: 400%;
   flex-wrap: nowrap;
+  overflow-y: hidden;
+  background: transparent;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 3s; 
 }
 
 .strip h1 {
   color: #00941A;
-  line-height: 12vh;
+  line-height: 100pt;
+  overflow-y: hidden;
+  background: transparent;
 }
 
 .strip h1 span {
   -webkit-text-stroke: 2px #1F2242;
   color: transparent;
+  overflow-y: hidden;
 }
 
 .strip2 {
-  font-size: 6vw;
+  font-size: 50pt;
   display: flex;
-  width: 400%;
+  width: 500%;
   flex-wrap: nowrap;
   margin-left: -100%;
+  overflow-y: hidden;
+  background: transparent;
+  z-index: 50;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
 }
 
 .strip2 h1 {
   color: #1F2242;
-  line-height: 12vh;
+  line-height: 100pt;
+  overflow-y: hidden;
+  background: transparent;
 }
 
 .strip2 h1 span{
   color: transparent;
+  overflow-y: hidden;
   -webkit-text-stroke: 2px #1F2242;
 }
 
